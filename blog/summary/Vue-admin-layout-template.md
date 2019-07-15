@@ -8,7 +8,7 @@ tags:
   - admin
   - element-ui
 categories:
-  - documentation
+  - 摘要
 --- 
 
 > vue-admin-layout-template使用方法 

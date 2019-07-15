@@ -8,7 +8,7 @@ tags:
   - vuepress
   - vuepress-plugin-blog-multidir
 categories:
-  - documentation
+  - 摘要
 --- 
 
 > Blog plugin for vuepress

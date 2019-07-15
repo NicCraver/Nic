@@ -9,7 +9,7 @@ tags:
   - vue
   - vuepress
 categories:
-  - documentation
+  - 摘要
 --- 
 
 > A blog theme for VuePress

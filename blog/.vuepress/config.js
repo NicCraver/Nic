@@ -6,7 +6,8 @@ module.exports = {
   theme: 'ououe',
   themeConfig: {
     defaultTheme: 'dark',
-    cover: '/cover.jpg',
+    // cover: '/cover.jpg',
+    cover:'https://picsum.photos/1920/1080/?random&date=2019-07-01',
     logo: '/logo.png',
     search: true,
     pageGroup: 1,
@@ -16,8 +17,8 @@ module.exports = {
     },
     nav: [
       { text: '主页', link: '/' },
-      { text: '帖子', link: '/posts/' },
       { text: '文章', link: '/doc/' },
+      { text: '摘要', link: '/summary/' },
       { text: '标签', link: '/tag/' },
       { text: '类别', link: '/category/' },
       { text: '关于', link: '/about/' }
