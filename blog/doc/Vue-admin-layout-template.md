@@ -1,5 +1,5 @@
 ---
-title: vue-admin-layout-template使用方法
+title: vue-admin-layout使用方法
 display: home
 image: https://picsum.photos/1920/1080/?random&date=2019-07-15
 date: 2019-07-15
@@ -8,11 +8,17 @@ tags:
   - admin
   - element-ui
 categories:
-  - vue-admin
+  - documentation
 --- 
 
 > vue-admin-layout-template使用方法 
-
+## 下载
+``` sh
+//使用Git Bash
+git clone https://github.com/NicCraver/vue-admin-layout-template.git
+```
+或直接去GitHub里下载
+[vue-admin-layout-template](https://github.com/NicCraver/vue-admin-layout-template)
 ## 安装
 ``` sh
 yarn
