@@ -4,7 +4,7 @@ display: home
 image: https://picsum.photos/1920/1080/?random&date=2019-07-15-48
 date: 2019-07-15
 tags: 
-  - display
+  - VueCli
 categories:
   - 文章
 --- 
@@ -24,7 +24,7 @@ vue create my-project
 vue ui
 ```
 
-```
+``` js
 /**
  * *@2018-10-08
  * *@author trsoliu 
