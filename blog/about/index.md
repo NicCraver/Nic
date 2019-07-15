@@ -9,6 +9,6 @@ layout: Page
 > 
 > Vuepress主题源自：感谢[@tolking](https://ououe.com)
 > 
-> 占位图片源自：[@picsum](https://picsum.photos)
+> 占位图片源自：[picsum](https://picsum.photos)
 > 
-> 网站部署：[@Netlify](https://app.netlify.com)
+> 网站部署：[Netlify](https://app.netlify.com)
