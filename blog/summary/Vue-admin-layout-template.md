@@ -25,6 +25,12 @@ git clone https://github.com/NicCraver/vue-admin-layout-template.git
 yarn
 //or
 npm i
+
+//运行
+yarn dev
+
+//打包
+yarn build
 ```
 
 ## 目录
@@ -111,7 +117,7 @@ npm i
             demo3.vue 
 ```
 
-### main.js
+## main.js
 ``` js
 import Vue from "vue";
 
