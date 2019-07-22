@@ -9,7 +9,7 @@ tags:
   - vue
   - vuepress
 categories:
-  - 摘要
+  - 笔记
 --- 
 
 > A blog theme for VuePress
