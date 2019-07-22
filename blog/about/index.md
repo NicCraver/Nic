@@ -5,10 +5,27 @@ layout: Page
 
 # Nic博客
 
-> 我的GitHub：[@NicCraver](https://github.com/NicCraver)
-> 
-> Vuepress主题源自：感谢[@tolking](https://ououe.com)
-> 
-> 占位图片源自：[picsum](https://picsum.photos)
-> 
-> 网站部署：[Netlify](https://app.netlify.com)
+### 前端
+* es5/es6
+* vue、vuecli3.x、vuepress
+* sass
+* electron
+
+### 小程序
+* mpvue
+### 后端
+* node.js、koa、express
+### 联系我
+
+邮箱：mrnikoli@foxmail.com
+
+GitHub：[@NicCraver](https://github.com/NicCraver)
+
+
+Theme by [vuepress-theme-ououe](https://github.com/tolking/vuepress-theme-ououe)
+
+Image：[picsum](https://picsum.photos)
+
+网站部署：[netlify](https://app.netlify.com)
+
+________________________________________________________________
