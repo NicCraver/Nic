@@ -5,7 +5,6 @@ image: https://picsum.photos/1920/1080/?random&date=2019-07-22-19
 date: 2019-07-22
 tags:
   - js
-  - element-ui
 categories:
   - 笔记
 --- 
