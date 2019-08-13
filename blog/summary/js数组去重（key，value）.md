@@ -11,6 +11,27 @@ categories:
 
 ## 代码
 
+``` js
+var ary = [1, 2, 3, 4];
+
+var obj = [
+    {
+        id: 1,
+        name: 'luo1'
+    },
+    {
+        id: 2,
+        name: 'luo2'
+    },
+    {
+        id: 5,
+        name: 'luo5'
+    }
+]
+const newArr = obj.filter(item => !ary.includes(item.id))
+console.log(newArr)
+```
+
 方法一：
 
 采用对象访问属性的方法，判断属性值是否存在，如果不存在就添加。
