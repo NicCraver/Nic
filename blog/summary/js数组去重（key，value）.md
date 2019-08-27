@@ -1,6 +1,6 @@
 ---
 title: js数组去重（key，value）
-display: home
+display: none
 image: https://picsum.photos/1920/1080/?random&date=2019-08-07-12
 date: 2019-08-07
 tags:

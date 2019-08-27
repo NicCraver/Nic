@@ -1,6 +1,6 @@
 ---
 title: 基于 Vue 页面导出 PDF 与 html2canvas 跨域问题
-display: none
+display: home
 image: https://picsum.photos/1920/1080/?random&date=2019-02-20-45
 date: 2019-02-20
 tags: 

@@ -25,6 +25,8 @@ var str = /(?=.*[\d])?(?=.*[a-zA-Z])(?=.*[\d])/;
 if (!str.test(value)) {
   callback(new Error("密码必须包含数字和字母"));
 }
+// 不能输入空格
+/\s+/g, ""
 ```
 
 ## 校验身份证

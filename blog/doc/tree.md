@@ -1,6 +1,6 @@
 ---
 title: 使用tree生成目录树结构
-# display: none
+display: home
 image: https://picsum.photos/1920/1080/?random&date=2019-07-15-36
 date: 2019-07-15
 tags: 
