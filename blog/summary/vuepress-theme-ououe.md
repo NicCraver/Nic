@@ -1,6 +1,6 @@
 ---
 title: vuepress-theme-ououe
-display: home
+display: none
 lang: en-US
 description: A blog theme for VuePress
 image: https://picsum.photos/1920/1080/?random&date=2019-02-22

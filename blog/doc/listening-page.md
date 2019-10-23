@@ -1,6 +1,6 @@
 ---
 title: 监听页面时刷新还是离开
-display: none
+display: home
 image: https://picsum.photos/1920/1080/?random&date=2019-02-20-42
 date: 2019-02-20
 tags: 

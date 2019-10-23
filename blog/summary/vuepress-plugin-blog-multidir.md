@@ -1,6 +1,6 @@
 ---
 title: vuepress-plugin-blog-multidir
-display: home
+display: none
 image: https://picsum.photos/1920/1080/?random&date=2019-03-09
 date: 2019-03-09
 tags:

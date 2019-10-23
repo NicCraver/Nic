@@ -161,3 +161,102 @@ saveFile(url,data);
 ### 五、函数参数默认值
 > 解决的问题
 >    1. 优化代码
+
+通过`method = "GET"`这种方式直接设置默认值
+``` js
+// function makeAjaxRequest(url,method){
+//   if(!method){
+//     method = "GET";
+//   }
+//   return method;
+// }
+
+// function makeAjaxRequest(url,method = "GET"){
+  
+//   return method;
+// }
+
+// console.log(makeAjaxRequest("google.com"));
+// console.log(makeAjaxRequest("google.com","POST"));
+
+function User(id){
+  this.id = id;
+}
+// console.log(new User(1));
+
+function randomId(){
+  return Math.random() * 99999999;
+}
+
+// console.log(new User(randomId()));
+
+function createAdminUser(user = new User(randomId())){
+  user.admin = true;
+  return user;
+}
+
+const user = new User(2);
+
+console.log(createAdminUser());
+```
+
+### 六、spread operator 展开运算符
+> 更快,更便捷的操作数组,将一个数组转为用逗号分隔的参数序列
+
+#### 合并数组
+``` js
+let a = [1,2,3];
+let b = [4,5,6];
+let c = [...a,...b]; // [1,2,3,4,5,6]
+```
+#### 替代apply
+``` js
+function f(a,b,c){
+  console.log(a,b,c)
+}
+let args = [1,2,3];
+// 以下三种方法结果相同
+f.apply(null,args)
+f(...args)
+f(1,2,3)
+
+function f2(...args){
+  console.log(args)
+}
+f2(1,2,3) // [1,2,3]
+
+function f3(){
+  console.log(Array.from(arguments))
+}
+f3(1,2,3) // [1,2,3]
+```
+#### 解构赋值
+``` js
+let a = [1,2,3,4,5,6]
+let [c,...d] = a
+console.log(c); // 1
+console.log(d); // [2,3,4,5,6]
+//展开运算符必须放在最后一位
+```
+
+#### 浅拷贝
+``` js 
+//数组
+var a = [1,2,4]
+var b = [...a]
+a.push(6)
+console.log(b) // [1,2,4]
+
+//对象
+var a = {a:1}
+var b = {...a}
+a.a = 5
+console.log(b.a) // 1
+```
+
+### 七、Calss
+> 万事皆对象
+
+
+### 六、spread operator 展开运算符
+> 更快,更便捷的操作数组
