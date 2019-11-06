@@ -1,7 +1,7 @@
 ---
 title: ES6
 display: home
-image: https://picsum.photos/1920/1080/?random&date=2019-10-11-12
+image: https://picsum.photos/1920/1080/?random&date=2019-11-1-19
 date: 2019-10-11
 tags: 
   - ES6
