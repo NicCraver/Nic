@@ -258,5 +258,16 @@ console.log(b.a) // 1
 > 万事皆对象
 
 
-### 六、spread operator 展开运算符
+### 八、Promise
 > 更快,更便捷的操作数组
+
+#### 三种状态：
+1. unresolved 等待任务完成
+2. resolved   任务完成并且没有任何问题  then  回调callback
+3. rejected   任务完成，但是出现问题    catch 回调callback
+
+
+
+
+
+
