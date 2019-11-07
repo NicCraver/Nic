@@ -134,6 +134,14 @@ export default class Index extends Component {
 
 ```
 
+### Taro 缓存
+``` js 
+// 取值
+let store = Taro.getStorageSync(foodKey);
+// 存值
+Taro.setStorageSync(foodKey,store);
+```
+
 
 
 
