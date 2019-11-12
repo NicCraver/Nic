@@ -47,7 +47,7 @@ export default class TestDialog extends Component {
 }
 ```
 
-### 2向组件传值
+### 2.向组件传值
 组件
 ``` jsx
 import Taro, { Component } from '@tarojs/taro'
