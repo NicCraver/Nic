@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Nic | Y',
-  description: 'I am Nic, Work hard and love life, but more importantly, love Yue.',
+  description: 'I am Nic, Work hard and love life, but more importantly, love 越.',
   head: [["link", { rel: "icon", href: "/yy.ico" }]],
   base: '/',
   dest: 'dist/',
