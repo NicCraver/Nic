@@ -21,11 +21,9 @@
     "dark-theme"
   ],
   "scripts": {
-    "dev": "vuepress dev examples",
-    "serve": "vuepress dev examples",
-    "build": "vuepress build examples",
-    "dev:docs": "vuepress dev docs",
-    "build:docs": "vuepress build docs"
+    "dev": "vuepress dev nic",
+    "serve": "vuepress dev nic",
+    "build": "vuepress build nic"
   },
   "dependencies": {
     "@vuepress/plugin-back-to-top": "^1.0.1",
