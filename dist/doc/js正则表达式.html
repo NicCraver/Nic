@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>js正则表达式 | Nic | Y</title>
+    <meta name="description" content="I am Nic, Work hard and love life, but more importantly, love 越.">
+    <link rel="icon" href="/yy.ico">
+    
+    <link rel="preload" href="/assets/css/0.styles.8832d794.css" as="style"><link rel="preload" href="/assets/js/app.a812c260.js" as="script"><link rel="preload" href="/assets/js/10.8c6ff936.js" as="script"><link rel="prefetch" href="/assets/js/11.1b0164cf.js"><link rel="prefetch" href="/assets/js/12.dfe8f7db.js"><link rel="prefetch" href="/assets/js/13.e2a98b81.js"><link rel="prefetch" href="/assets/js/14.304c37db.js"><link rel="prefetch" href="/assets/js/15.4c9987aa.js"><link rel="prefetch" href="/assets/js/16.bda155f4.js"><link rel="prefetch" href="/assets/js/17.511ec22f.js"><link rel="prefetch" href="/assets/js/18.31067e99.js"><link rel="prefetch" href="/assets/js/19.91facd4a.js"><link rel="prefetch" href="/assets/js/2.3073d43b.js"><link rel="prefetch" href="/assets/js/20.bc4fe4ef.js"><link rel="prefetch" href="/assets/js/21.36d20b92.js"><link rel="prefetch" href="/assets/js/22.329bc2e9.js"><link rel="prefetch" href="/assets/js/23.eaa9cc84.js"><link rel="prefetch" href="/assets/js/24.29e35af5.js"><link rel="prefetch" href="/assets/js/25.b8376c98.js"><link rel="prefetch" href="/assets/js/3.192a24fc.js"><link rel="prefetch" href="/assets/js/4.cdc33260.js"><link rel="prefetch" href="/assets/js/5.30c86042.js"><link rel="prefetch" href="/assets/js/6.1ae9f685.js"><link rel="prefetch" href="/assets/js/7.7c4a7185.js"><link rel="prefetch" href="/assets/js/8.efd41c53.js"><link rel="prefetch" href="/assets/js/9.041d5bf1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8832d794.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><section id="global-layout" data-v-4447dda2><header class="header" data-v-1f858c5b data-v-4447dda2><div class="header-navbar" data-v-1f858c5b><div class="flex-xbc main header-nav" data-v-1f858c5b><div class="nav-link" data-v-1f858c5b><a href="/" class="inblock link-logo router-link-active" data-v-1f858c5b><img data-src="/logo.png" loading="lazy" alt="logo" class="logo-img lazy" data-v-1f858c5b></a> <nav class="link-list" data-v-1f858c5b><a href="/" class="list-item router-link-active" data-v-1f858c5b>主页</a><a href="/posts/" class="list-item" data-v-1f858c5b>笔记</a><a href="/doc/" class="list-item router-link-active" data-v-1f858c5b>文章</a><a href="/tag/" class="list-item" data-v-1f858c5b>标签</a><a href="/category/" class="list-item" data-v-1f858c5b>类别</a><a href="/about/" class="list-item" data-v-1f858c5b>关于</a></nav></div> <div class="search-box" data-v-1f858c5b><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></div> </header> <!----> <section class="page" data-v-4447dda2><section class="info no-bg" data-v-39edd49c><article class="main info-content" data-v-f5f72dc4 data-v-39edd49c><div class="content-header" data-v-f5f72dc4><h1 class="header-title" data-v-f5f72dc4>js正则表达式</h1></div> <div class="flex-wcc content-tag" data-v-f5f72dc4><div class="inblock tag-list" data-v-f5f72dc4><a href="/category/笔记/" class="tag-text" data-v-f5f72dc4>笔记
+      </a></div> <span class="tag-space" data-v-f5f72dc4>/</span> <div class="inblock tag-list" data-v-f5f72dc4><a href="/tag/js/" class="tag-text" data-v-f5f72dc4>js
+      </a></div></div> <div class="content content__default" data-v-f5f72dc4><h2 id="校验写法"><a href="#校验写法" class="header-anchor">#</a> 校验写法</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//不能输入中文</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token regex">/[\u4E00-\u9FA5]/g</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;不能输入中文&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//不能输入空格</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token regex">/^ +| +$/g</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;不能输入空格&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//密码必须包含数字和字母</span>
+<span class="token keyword">var</span> str <span class="token operator">=</span> <span class="token regex">/(?=.*[\d])?(?=.*[a-zA-Z])(?=.*[\d])/</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>str<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;密码必须包含数字和字母&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 不能输入空格</span>
+<span class="token operator">/</span>\s<span class="token operator">+</span><span class="token operator">/</span>g<span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span>
+</code></pre></div><h2 id="校验身份证"><a href="#校验身份证" class="header-anchor">#</a> 校验身份证</h2> <div class="language- extra-class"><pre class="language-text"><code>1、只针对18为身份证号码进行校验，现在15位的应该很少了，
+
+2、不区分xX大小写，
+
+3、出生年份1900-2099，每月的天数也进行相关验证(考虑的闰月的情况)，
+
+4、校验规则详见，这个写的比较详细和清楚，相信看过后都可以自己写一个，
+
+https://jingyan.baidu.com/article/7f41ececff944a593d095c8c.html
+
+5、目前还无法对区位码就进行精确校验，本人搜集整理了区位码，提供了一个查询api，仅攻参考。
+
+有不精确的地方可以留言指出
+
+api地址：http://www.xuzee.com/api/idcard.php
+
+接口说明：http://www.xuzee.com/api/
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">testid</span><span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token comment">// 1 &quot;验证通过!&quot;, 0 //校验不通过 // id为身份证号码</span>
+    <span class="token keyword">var</span> format <span class="token operator">=</span> <span class="token regex">/^(([1][1-5])|([2][1-3])|([3][1-7])|([4][1-6])|([5][0-4])|([6][1-5])|([7][1])|([8][1-2]))\d{4}(([1][9]\d{2})|([2]\d{3}))(([0][1-9])|([1][0-2]))(([0][1-9])|([1-2][0-9])|([3][0-1]))\d{3}[0-9xX]$/</span><span class="token punctuation">;</span>
+    <span class="token comment">//号码规则校验</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>format<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token string">'status'</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token string">'msg'</span><span class="token punctuation">:</span><span class="token string">'身份证号码不合规'</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">//区位码校验</span>
+    <span class="token comment">//出生年月日校验  前正则限制起始年份为1900;</span>
+    <span class="token keyword">var</span> year <span class="token operator">=</span> id<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token comment">//身份证年</span>
+      month <span class="token operator">=</span> id<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token comment">//身份证月</span>
+      date <span class="token operator">=</span> id<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token comment">//身份证日</span>
+      time <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>month<span class="token operator">+</span><span class="token string">'-'</span><span class="token operator">+</span>date<span class="token operator">+</span><span class="token string">'-'</span><span class="token operator">+</span>year<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token comment">//身份证日期时间戳date</span>
+      now_time <span class="token operator">=</span> Date<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token comment">//当前时间戳</span>
+      dates <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>year<span class="token punctuation">,</span>month<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//身份证当月天数</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>time<span class="token operator">&gt;</span>now_time<span class="token operator">||</span>date<span class="token operator">&gt;</span>dates<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token string">'status'</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token string">'msg'</span><span class="token punctuation">:</span><span class="token string">'出生日期不合规'</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">//校验码判断</span>
+    <span class="token keyword">var</span> c <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//系数</span>
+    <span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'0'</span><span class="token punctuation">,</span><span class="token string">'X'</span><span class="token punctuation">,</span><span class="token string">'9'</span><span class="token punctuation">,</span><span class="token string">'8'</span><span class="token punctuation">,</span><span class="token string">'7'</span><span class="token punctuation">,</span><span class="token string">'6'</span><span class="token punctuation">,</span><span class="token string">'5'</span><span class="token punctuation">,</span><span class="token string">'4'</span><span class="token punctuation">,</span><span class="token string">'3'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//校验码对照表</span>
+    <span class="token keyword">var</span> id_array <span class="token operator">=</span> id<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> k<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>k<span class="token operator">&lt;</span><span class="token number">17</span><span class="token punctuation">;</span>k<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      sum<span class="token operator">+=</span><span class="token function">parseInt</span><span class="token punctuation">(</span>id_array<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token function">parseInt</span><span class="token punctuation">(</span>c<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>id_array<span class="token punctuation">[</span><span class="token number">17</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> b<span class="token punctuation">[</span>sum<span class="token operator">%</span><span class="token number">11</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token string">'status'</span><span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token string">'msg'</span><span class="token punctuation">:</span><span class="token string">'身份证校验码不合规'</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token string">'status'</span><span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token string">'msg'</span><span class="token punctuation">:</span><span class="token string">'校验通过'</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_1、校验数字的表达式"><a href="#_1、校验数字的表达式" class="header-anchor">#</a> 1、校验数字的表达式</h3> <div class="language- extra-class"><pre class="language-text"><code>1. 数字：^[0-9]*$
+
+2. n位的数字：^\d{n}$
+
+3. 至少n位的数字：^\d{n,}$
+
+4. m-n位的数字：^\d{m,n}$
+
+5. 零和非零开头的数字：^(0|[1-9][0-9]*)$
+
+6. 非零开头的最多带两位小数的数字：^([1-9][0-9]*)+(.[0-9]{1,2})?$
+
+7. 带1-2位小数的正数或负数：^(\-)?\d+(\.\d{1,2})?$
+
+8. 正数、负数、和小数：^(\-|\+)?\d+(\.\d+)?$
+
+9. 有两位小数的正实数：^[0-9]+(.[0-9]{2})?$
+
+10. 有1~3位小数的正实数：^[0-9]+(.[0-9]{1,3})?$
+
+11. 非零的正整数：^[1-9]\d*$ 或 ^([1-9][0-9]*){1,3}$ 或 ^\+?[1-9][0-9]*$
+
+12. 非零的负整数：^\-[1-9][]0-9&quot;*$ 或 ^-[1-9]\d*$
+
+13. 非负整数：^\d+$ 或 ^[1-9]\d*|0$
+
+14. 非正整数：^-[1-9]\d*|0$ 或 ^((-\d+)|(0+))$
+
+15. 非负浮点数：^\d+(\.\d+)?$ 或 ^[1-9]\d*\.\d*|0\.\d*[1-9]\d*|0?\.0+|0$
+
+16. 非正浮点数：^((-\d+(\.\d+)?)|(0+(\.0+)?))$ 或 ^(-([1-9]\d*\.\d*|0\.\d*[1-9]\d*))|0?\.0+|0$
+
+17. 正浮点数：^[1-9]\d*\.\d*|0\.\d*[1-9]\d*$ 或 ^(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*))$
+
+18. 负浮点数：^-([1-9]\d*\.\d*|0\.\d*[1-9]\d*)$ 或 ^(-(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*)))$
+
+19. 浮点数：^(-?\d+)(\.\d+)?$ 或 ^-?([1-9]\d*\.\d*|0\.\d*[1-9]\d*|0?\.0+|0)$
+</code></pre></div><h3 id="_2、校验字符的表达式"><a href="#_2、校验字符的表达式" class="header-anchor">#</a> 2、校验字符的表达式</h3> <div class="language- extra-class"><pre class="language-text"><code>1. 汉字：^[\u4e00-\u9fa5]{0,}$
+
+2. 英文和数字：^[A-Za-z0-9]+$ 或 ^[A-Za-z0-9]{4,40}$
+
+3. 长度为3-20的所有字符：^.{3,20}$
+
+4. 由26个英文字母组成的字符串：^[A-Za-z]+$
+
+5. 由26个大写英文字母组成的字符串：^[A-Z]+$
+
+6. 由26个小写英文字母组成的字符串：^[a-z]+$
+
+7. 由数字和26个英文字母组成的字符串：^[A-Za-z0-9]+$
+
+8. 由数字、26个英文字母或者下划线组成的字符串：^\w+$ 或 ^\w{3,20}$
+
+9. 中文、英文、数字包括下划线：^[\u4E00-\u9FA5A-Za-z0-9_]+$
+
+ 
+
+10. 中文、英文、数字但不包括下划线等符号：^[\u4E00-\u9FA5A-Za-z0-9]+$ 或 ^[\u4E00-\u9FA5A-Za-z0-9]{2,20}$
+
+ 
+
+11. 可以输入含有^%&amp;',;=?$\&quot;等字符：[^%&amp;',;=?$\x22]+ 12 禁止输入含有~的字符：[^~\x22]+
+</code></pre></div><h3 id="_3、特殊需求表达式"><a href="#_3、特殊需求表达式" class="header-anchor">#</a> 3、特殊需求表达式</h3> <div class="language- extra-class"><pre class="language-text"><code>1. Email地址：^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$
+
+2. 域名：[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(/.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+/.?
+
+3. InternetURL：[a-zA-z]+://[^\s]* 或 ^http://([\w-]+\.)+[\w-]+(/[\w-./?%&amp;=]*)?$
+
+4. 手机号码：^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$
+
+5. 电话号码(&quot;XXX-XXXXXXX&quot;、&quot;XXXX-XXXXXXXX&quot;、&quot;XXX-XXXXXXX&quot;、&quot;XXX-XXXXXXXX&quot;、&quot;XXXXXXX&quot;和&quot;XXXXXXXX)：^(\(\d{3,4}-)|\d{3.4}-)?\d{7,8}$
+
+6. 国内电话号码(0511-4405222、021-87888822)：\d{3}-\d{8}|\d{4}-\d{7}
+
+7. 身份证号(15位、18位数字)：^\d{15}|\d{18}$
+
+ 
+
+8. 短身份证号码(数字、字母x结尾)：^([0-9]){7,18}(x|X)?$ 或 ^\d{8,18}|[0-9x]{8,18}|[0-9X]{8,18}?$
+
+ 
+
+9. 帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)：^[a-zA-Z][a-zA-Z0-9_]{4,15}$
+
+ 
+
+10. 密码(以字母开头，长度在6~18之间，只能包含字母、数字和下划线)：^[a-zA-Z]\w{5,17}$
+
+11. 强密码(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间)：^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$
+
+ 
+
+12. 日期格式：^\d{4}-\d{1,2}-\d{1,2}
+
+13. 一年的12个月(01～09和1～12)：^(0?[1-9]|1[0-2])$
+
+14. 一个月的31天(01～09和1～31)：^((0?[1-9])|((1|2)[0-9])|30|31)$
+
+15. 钱的输入格式：
+
+ 
+
+16. 1.有四种钱的表示形式我们可以接受:&quot;10000.00&quot; 和 &quot;10,000.00&quot;, 和没有 &quot;分&quot; 的 &quot;10000&quot; 和 &quot;10,000&quot;：^[1-9][0-9]*$
+
+ 
+
+17. 2.这表示任意一个不以0开头的数字,但是,这也意味着一个字符&quot;0&quot;不通过,所以我们采用下面的形式：^(0|[1-9][0-9]*)$
+
+ 
+
+18. 3.一个0或者一个不以0开头的数字.我们还可以允许开头有一个负号：^(0|-?[1-9][0-9]*)$
+
+ 
+
+19. 4.这表示一个0或者一个可能为负的开头不为0的数字.让用户以0开头好了.把负号的也去掉,因为钱总不能是负的吧.下面我们要加的是说明可能的小数部分：^[0-9]+(.[0-9]+)?$
+
+ 
+
+20. 5.必须说明的是,小数点后面至少应该有1位数,所以&quot;10.&quot;是不通过的,但是 &quot;10&quot; 和 &quot;10.2&quot; 是通过的：^[0-9]+(.[0-9]{2})?$
+
+ 
+
+21. 6.这样我们规定小数点后面必须有两位,如果你认为太苛刻了,可以这样：^[0-9]+(.[0-9]{1,2})?$
+
+ 
+
+22. 7.这样就允许用户只写一位小数.下面我们该考虑数字中的逗号了,我们可以这样：^[0-9]{1,3}(,[0-9]{3})*(.[0-9]{1,2})?$
+
+ 
+
+23 8.1到3个数字,后面跟着任意个 逗号+3个数字,逗号成为可选,而不是必须：^([0-9]+|[0-9]{1,3}(,[0-9]{3})*)(.[0-9]{1,2})?$
+
+ 
+
+24. 备注：这就是最终结果了,别忘了&quot;+&quot;可以用&quot;*&quot;替代如果你觉得空字符串也可以接受的话(奇怪,为什么?)最后,别忘了在用函数时去掉去掉那个反斜杠,一般的错误都在这里
+
+ 
+
+25. xml文件：^([a-zA-Z]+-?)+[a-zA-Z0-9]+\\.[x|X][m|M][l|L]$
+
+26. 中文字符的正则表达式：[\u4e00-\u9fa5]
+
+ 
+
+27. 双字节字符：[^\x00-\xff] (包括汉字在内，可以用来计算字符串的长度(一个双字节字符长度计2，ASCII字符计1))
+
+ 
+
+28. 空白行的正则表达式：\n\s*\r (可以用来删除空白行)
+
+ 
+
+29. HTML标记的正则表达式：&lt;(\S*?)[^&gt;]*&gt;.*?&lt;/\1&gt;|&lt;.*? /&gt; (网上流传的版本太糟糕，上面这个也仅仅能部分，对于复杂的嵌套标记依旧无能为力)
+
+ 
+
+30. 首尾空白字符的正则表达式：^\s*|\s*$或(^\s*)|(\s*$) (可以用来删除行首行尾的空白字符(包括空格、制表符、换页符等等)，非常有用的表达式)
+
+ 
+
+31. 腾讯QQ号：[1-9][0-9]{4,} (腾讯QQ号从10000开始)
+
+32. 中国邮政编码：[1-9]\d{5}(?!\d) (中国邮政编码为6位数字)
+
+33. IP地址：\d+\.\d+\.\d+\.\d+ (提取IP地址时有用)
+
+34. IP地址：((?:(?:25[0-5]|2[0-4]\\d|[01]?\\d?\\d)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d?\\d))
+</code></pre></div></div> <div class="content-time" data-v-f5f72dc4><time datetime="2019-02-22" class="time-text" data-v-f5f72dc4>Create Time: 2019-7-22</time> <time datetime="2019-02-22" class="time-text" data-v-f5f72dc4>Last Updated: 2019-11-13</time></div></article> <section class="flex-xb main info-nav" data-v-71a7ec73 data-v-39edd49c><a href="/doc/vue%E7%BB%84%E4%BB%B6%E5%8F%91%E5%B8%83%E5%88%B0npm.html" class="flex-xb nav-item" data-v-71a7ec73><div class="flex-xcc item-img" data-v-71a7ec73><img data-src="https://picsum.photos/1920/1080/?random&amp;date=2019-08-1-16" alt="vue组件发布到npm" loading="lazy" class="img lazy" data-v-71a7ec73></div> <article class="flex-ysc item-content" data-v-71a7ec73><h2 class="content-title" data-v-71a7ec73>vue组件发布到npm</h2> <div class="content" data-v-71a7ec73></div></article></a> <a href="/doc/vuecli3-admin.html" class="flex-xb nav-item" data-v-71a7ec73><div class="flex-xcc item-img" data-v-71a7ec73><img data-src="https://picsum.photos/1920/1080/?random&amp;date=2019-07-22" alt="vuecli3-vue.config.js配置方法" loading="lazy" class="img lazy" data-v-71a7ec73></div> <article class="flex-ysc item-content" data-v-71a7ec73><h2 class="content-title" data-v-71a7ec73>vuecli3-vue.config.js配置方法</h2> <div class="content" data-v-71a7ec73></div></article></a></section> <!----></section></section> <footer class="footer" data-v-97f32788 data-v-4447dda2><nav class="link-list" data-v-97f32788><a href="https://github.com/NicCraver" target="_blank" rel="noopener noreferrer" class="list-item" data-v-97f32788>Github</a></nav> <a href="/" class="copyright router-link-active" data-v-97f32788>Nic | Y © 2019</a></footer></section><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.a812c260.js" defer></script><script src="/assets/js/10.8c6ff936.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>使用tree生成目录树结构 | Nic | Y</title>
+    <meta name="description" content="I am Nic, Work hard and love life, but more importantly, love 越.">
+    <link rel="icon" href="/yy.ico">
+    
+    <link rel="preload" href="/assets/css/0.styles.8832d794.css" as="style"><link rel="preload" href="/assets/js/app.a812c260.js" as="script"><link rel="preload" href="/assets/js/23.eaa9cc84.js" as="script"><link rel="prefetch" href="/assets/js/10.8c6ff936.js"><link rel="prefetch" href="/assets/js/11.1b0164cf.js"><link rel="prefetch" href="/assets/js/12.dfe8f7db.js"><link rel="prefetch" href="/assets/js/13.e2a98b81.js"><link rel="prefetch" href="/assets/js/14.304c37db.js"><link rel="prefetch" href="/assets/js/15.4c9987aa.js"><link rel="prefetch" href="/assets/js/16.bda155f4.js"><link rel="prefetch" href="/assets/js/17.511ec22f.js"><link rel="prefetch" href="/assets/js/18.31067e99.js"><link rel="prefetch" href="/assets/js/19.91facd4a.js"><link rel="prefetch" href="/assets/js/2.3073d43b.js"><link rel="prefetch" href="/assets/js/20.bc4fe4ef.js"><link rel="prefetch" href="/assets/js/21.36d20b92.js"><link rel="prefetch" href="/assets/js/22.329bc2e9.js"><link rel="prefetch" href="/assets/js/24.29e35af5.js"><link rel="prefetch" href="/assets/js/25.b8376c98.js"><link rel="prefetch" href="/assets/js/3.192a24fc.js"><link rel="prefetch" href="/assets/js/4.cdc33260.js"><link rel="prefetch" href="/assets/js/5.30c86042.js"><link rel="prefetch" href="/assets/js/6.1ae9f685.js"><link rel="prefetch" href="/assets/js/7.7c4a7185.js"><link rel="prefetch" href="/assets/js/8.efd41c53.js"><link rel="prefetch" href="/assets/js/9.041d5bf1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8832d794.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><section id="global-layout" data-v-4447dda2><header class="header" data-v-1f858c5b data-v-4447dda2><div class="header-navbar" data-v-1f858c5b><div class="flex-xbc main header-nav" data-v-1f858c5b><div class="nav-link" data-v-1f858c5b><a href="/" class="inblock link-logo router-link-active" data-v-1f858c5b><img data-src="/logo.png" loading="lazy" alt="logo" class="logo-img lazy" data-v-1f858c5b></a> <nav class="link-list" data-v-1f858c5b><a href="/" class="list-item router-link-active" data-v-1f858c5b>主页</a><a href="/posts/" class="list-item router-link-active" data-v-1f858c5b>笔记</a><a href="/doc/" class="list-item" data-v-1f858c5b>文章</a><a href="/tag/" class="list-item" data-v-1f858c5b>标签</a><a href="/category/" class="list-item" data-v-1f858c5b>类别</a><a href="/about/" class="list-item" data-v-1f858c5b>关于</a></nav></div> <div class="search-box" data-v-1f858c5b><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></div> </header> <!----> <section class="page" data-v-4447dda2><section class="info no-bg" data-v-39edd49c><article class="main info-content" data-v-f5f72dc4 data-v-39edd49c><div class="content-header" data-v-f5f72dc4><h1 class="header-title" data-v-f5f72dc4>使用tree生成目录树结构</h1></div> <div class="flex-wcc content-tag" data-v-f5f72dc4><div class="inblock tag-list" data-v-f5f72dc4><a href="/category/文章/" class="tag-text" data-v-f5f72dc4>文章
+      </a></div> <span class="tag-space" data-v-f5f72dc4>/</span> <div class="inblock tag-list" data-v-f5f72dc4><a href="/tag/display/" class="tag-text" data-v-f5f72dc4>display
+      </a></div></div> <div class="content content__default" data-v-f5f72dc4><blockquote><p>使用tree生成目录树结构</p></blockquote> <div class="language-sh extra-class"><pre class="language-sh"><code>tree /F
+</code></pre></div><p>当你在当前目录下使用tree /F或者tree /a 这两个命令时,你会发现,它会把所有文件目录结构都给你打印出来</p> <div class="language- extra-class"><pre class="language-text"><code>E:.                                            
+│  .gitignore                                  
+│  deploy.sh                                   
+│  LICENSE                                     
+│  package.json                                
+│  README.md                                   
+│  yarn.lock                                   
+│                                              
+├─blog                                         
+│  ├─.vuepress                                 
+│  │  │  config.js                             
+│  │  │                                        
+│  │  └─public                                 
+│  │          cover.jpg                        
+│  │          cover1.jpg                        
+│  │          logo.png                         
+│  │          logo1.png                        
+│  │                                           
+│  ├─about                                     
+│  │      index.md                             
+│  │                                           
+│  ├─doc                                       
+│  │      Vue-admin-layout-template.md         
+│  │      vuepress-plugin-blog-multidir.md     
+│  │      vuepress-theme-ououe.md              
+│  │                                           
+│  └─posts                                     
+│          1.md                                
+│          2.md                                
+│          3.md                                
+│          tree.md                             
+│          Vue-Markdown.md                     
+│                                              
+└─dist                                         
+    │  404.html                                
+    │  cover.jpg                               
+    │  cover1.jpg                              
+    │  index.html                               
+    │  logo.png                                
+    │  logo1.png                               
+    │                                          
+    ├─about                                    
+    │      index.html                          
+    │                                          
+    ├─assets                                   
+    │  ├─css                                   
+    │  │      0.styles.917f4b29.css            
+    │  │                                       
+    │  ├─img                                   
+    │  │      search.83621669.svg              
+    │  │                                       
+    │  └─js                                    
+    │          2.33b716b6.js                   
+    │          3.4d264132.js                   
+    │          4.8b08d018.js                   
+    │          5.37787e5f.js                   
+    │          6.3ff8174d.js                   
+    │          7.dd165190.js                   
+    │          8.b5f25105.js                   
+    │          app.cb9e64d0.js                 
+    │                                          
+    ├─category                                 
+    │  │  index.html                           
+    │  │                                       
+    │  ├─documentation                         
+    │  │      index.html                       
+    │  │                                       
+    │  └─futurama                              
+    │          index.html                      
+    │                                          
+    ├─doc                                      
+    │      index.html                          
+    │      vuepress-plugin-blog-multidir.html  
+    │      vuepress-theme-ououe.html           
+    │                                          
+    ├─posts                                    
+    │      1.html                              
+    │      2.html                              
+    │      3.html                              
+    │      index.html                          
+    │                                          
+    └─tag                                      
+        │  index.html                          
+        │                                      
+        ├─about                                
+        │      index.html                      
+        │                                      
+        ├─display                              
+        │      index.html                      
+        │                                      
+        ├─vue                                  
+        │      index.html                      
+        │                                      
+        ├─vuepress                             
+        │      index.html                      
+        │                                      
+        └─vuepress-plugin-blog-multidir        
+                index.html       
+</code></pre></div></div> <div class="content-time" data-v-f5f72dc4><time datetime="2019-02-22" class="time-text" data-v-f5f72dc4>Create Time: 2019-7-15</time> <time datetime="2019-02-22" class="time-text" data-v-f5f72dc4>Last Updated: 2019-11-13</time></div></article> <section class="flex-xb main info-nav" data-v-71a7ec73 data-v-39edd49c><a href="/posts/Vue-Markdown.html" class="flex-xb nav-item" data-v-71a7ec73><div class="flex-xcc item-img" data-v-71a7ec73><img data-src="https://picsum.photos/1920/1080/?random&amp;date=2019-07-15-21" alt="Vue Markdown 语法" loading="lazy" class="img lazy" data-v-71a7ec73></div> <article class="flex-ysc item-content" data-v-71a7ec73><h2 class="content-title" data-v-71a7ec73>Vue Markdown 语法</h2> <div class="content" data-v-71a7ec73></div></article></a> <a href="/posts/vue-config-js.html" class="flex-xb nav-item" data-v-71a7ec73><div class="flex-xcc item-img" data-v-71a7ec73><img data-src="https://picsum.photos/1920/1080/?random&amp;date=2019-07-15-48" alt="VueCli3.x" loading="lazy" class="img lazy" data-v-71a7ec73></div> <article class="flex-ysc item-content" data-v-71a7ec73><h2 class="content-title" data-v-71a7ec73>VueCli3.x</h2> <div class="content" data-v-71a7ec73></div></article></a></section> <!----></section></section> <footer class="footer" data-v-97f32788 data-v-4447dda2><nav class="link-list" data-v-97f32788><a href="https://github.com/NicCraver" target="_blank" rel="noopener noreferrer" class="list-item" data-v-97f32788>Github</a></nav> <a href="/" class="copyright router-link-active" data-v-97f32788>Nic | Y © 2019</a></footer></section><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.a812c260.js" defer></script><script src="/assets/js/23.eaa9cc84.js" defer></script>
+  </body>
+</html>

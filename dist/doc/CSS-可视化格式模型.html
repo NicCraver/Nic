@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CSS-可视化格式模型 | Nic | Y</title>
+    <meta name="description" content="I am Nic, Work hard and love life, but more importantly, love 越.">
+    <link rel="icon" href="/yy.ico">
+    
+    <link rel="preload" href="/assets/css/0.styles.8832d794.css" as="style"><link rel="preload" href="/assets/js/app.a812c260.js" as="script"><link rel="preload" href="/assets/js/3.192a24fc.js" as="script"><link rel="prefetch" href="/assets/js/10.8c6ff936.js"><link rel="prefetch" href="/assets/js/11.1b0164cf.js"><link rel="prefetch" href="/assets/js/12.dfe8f7db.js"><link rel="prefetch" href="/assets/js/13.e2a98b81.js"><link rel="prefetch" href="/assets/js/14.304c37db.js"><link rel="prefetch" href="/assets/js/15.4c9987aa.js"><link rel="prefetch" href="/assets/js/16.bda155f4.js"><link rel="prefetch" href="/assets/js/17.511ec22f.js"><link rel="prefetch" href="/assets/js/18.31067e99.js"><link rel="prefetch" href="/assets/js/19.91facd4a.js"><link rel="prefetch" href="/assets/js/2.3073d43b.js"><link rel="prefetch" href="/assets/js/20.bc4fe4ef.js"><link rel="prefetch" href="/assets/js/21.36d20b92.js"><link rel="prefetch" href="/assets/js/22.329bc2e9.js"><link rel="prefetch" href="/assets/js/23.eaa9cc84.js"><link rel="prefetch" href="/assets/js/24.29e35af5.js"><link rel="prefetch" href="/assets/js/25.b8376c98.js"><link rel="prefetch" href="/assets/js/4.cdc33260.js"><link rel="prefetch" href="/assets/js/5.30c86042.js"><link rel="prefetch" href="/assets/js/6.1ae9f685.js"><link rel="prefetch" href="/assets/js/7.7c4a7185.js"><link rel="prefetch" href="/assets/js/8.efd41c53.js"><link rel="prefetch" href="/assets/js/9.041d5bf1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8832d794.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><section id="global-layout" data-v-4447dda2><header class="header" data-v-1f858c5b data-v-4447dda2><div class="header-navbar" data-v-1f858c5b><div class="flex-xbc main header-nav" data-v-1f858c5b><div class="nav-link" data-v-1f858c5b><a href="/" class="inblock link-logo router-link-active" data-v-1f858c5b><img data-src="/logo.png" loading="lazy" alt="logo" class="logo-img lazy" data-v-1f858c5b></a> <nav class="link-list" data-v-1f858c5b><a href="/" class="list-item router-link-active" data-v-1f858c5b>主页</a><a href="/posts/" class="list-item" data-v-1f858c5b>笔记</a><a href="/doc/" class="list-item router-link-active" data-v-1f858c5b>文章</a><a href="/tag/" class="list-item" data-v-1f858c5b>标签</a><a href="/category/" class="list-item" data-v-1f858c5b>类别</a><a href="/about/" class="list-item" data-v-1f858c5b>关于</a></nav></div> <div class="search-box" data-v-1f858c5b><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></div> </header> <!----> <section class="page" data-v-4447dda2><section class="info no-bg" data-v-39edd49c><article class="main info-content" data-v-f5f72dc4 data-v-39edd49c><div class="content-header" data-v-f5f72dc4><h1 class="header-title" data-v-f5f72dc4>CSS-可视化格式模型</h1></div> <div class="flex-wcc content-tag" data-v-f5f72dc4><div class="inblock tag-list" data-v-f5f72dc4><a href="/category/笔记/" class="tag-text" data-v-f5f72dc4>笔记
+      </a></div> <span class="tag-space" data-v-f5f72dc4>/</span> <div class="inblock tag-list" data-v-f5f72dc4><a href="/tag/css/" class="tag-text" data-v-f5f72dc4>css
+      </a></div></div> <div class="content content__default" data-v-f5f72dc4><blockquote><p>CSS-可视化格式模型</p></blockquote> <h2 id="基本盒模型"><a href="#基本盒模型" class="header-anchor">#</a> 基本盒模型</h2> <p>每个人在学习CSS时一定会接触到盒模型，比如最基本的IE盒模型和W3C标准盒模型。文档进行布局（lay out）的时候，浏览器的渲染引擎会根据标准之一的 CSS 基础框盒模型（CSS basic box model），将所有元素表示为一个个矩形的盒子（box）。CSS 决定这些盒子的大小、位置以及属性（例如颜色、背景、边框尺寸…）。每个盒子由四个部分（或称区域）组成，其效用由它们各自的边界（Edge）所定义。每个盒子有四个边界：内容边界 Content edge、内边距边界 Padding Edge、边框边界 Border Edge、外边框边界 Margin Edge。
+*其中，两种盒模型都由内容、内边距、边框和外边距组成，可以用box-sizing属性进行切换；
+*区别点是W3C标准盒模型的width和height只包含内容区Content，IE盒模型的width和height包含内容区、内边距Padding和边框Border。
+*注意：background同时作用于内容区、内边距和边框！
+如图给一个div设置宽高都是100px，W3C标准盒模型跟IE盒模型表现出的实际的盒子内容区大小是不一样的</p> <p><img alt="" data-src="https://raw.githubusercontent.com/wz71014q/img/master/cssbox/W3CBox.png" loading="lazy" class="lazy"> <img alt="" data-src="https://raw.githubusercontent.com/wz71014q/img/master/cssbox/IEBox.png" loading="lazy" class="lazy">
+基本的盒模型可以帮助我们进行更准确的布局，但是页面渲染用到的盒模型可不止这些。最近看到一种以前不知道的垂直居中布局的代码：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>main<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>我是居中的元素<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">css:
+.main</span><span class="token punctuation">{</span>
+   <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+   <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.main::after</span><span class="token punctuation">{</span>
+  <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+  <span class="token property">vertical-align</span><span class="token punctuation">:</span> middle<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>本来伪元素和伪类用的就不怎么样，看到这个就很不理解了。向大佬们请教，进而得知“可视化格式模型”这种东西。想起之前看到浏览器渲染页面的视频，确实是一个一个的框框堆积起来:
+<img alt="" data-src="https://raw.githubusercontent.com/wz71014q/img/master/render.gif" loading="lazy" class="lazy"></p> <h2 id="什么是可视化格式模型？"><a href="#什么是可视化格式模型？" class="header-anchor">#</a> 什么是可视化格式模型？</h2> <p>官方解释是：它规定了客户端（浏览器）如何在媒介（显示器）中渲染文档树(document tree)。如上图，每个节点、元素都有属于自己的可见或不可见、有名或匿名的盒模型，可视化格式模型即规定了这些盒、框框如何整齐地排列在页面中，还有盒子之间的相互作用。</p> <h2 id="可视化格式模型"><a href="#可视化格式模型" class="header-anchor">#</a> 可视化格式模型</h2> <p>1.包含块CB(Containing block)
+2.控制框：块框、行框
+3.FC(Formatting Context, 格式化上下文)
+*1.BFC(Block Formatting Context, 块级格式化上下文)
+*2.IFC(Inline Formatting Context, 行内格式上下文)
+*3.GFC(Grid Formatting Context, 网格布局格式化上下文)
+*4.FFC(Flex formatting contexts, 自适应格式上下文)
+4.定位体系(普通流、定位流、浮动流)
+5.浮动体系</p> <h2 id="包含块"><a href="#包含块" class="header-anchor">#</a> 包含块</h2> <p>1.根元素的包含块是一个被称为初始包含块的矩形
+2.如果 position 属性为 static 或 relative ，包含块就是由它的最近的祖先块元素（比如说inline-block, block 或 list-item元素）或格式化上下文的内容区(只有content)的边缘组成的。
+3.如果position属性为 absolute，包含块就是最近的position属性不为static值的祖先块元素的内边距区的边缘(content + padding)组成(padding框)。
+4.如果 position 属性是 absolute 或 fixed，包含块也可能是由满足以下条件的最近父级元素的内边距区的边缘组成的：</p> <blockquote><p>transform 或 perspective 值不为 none；
+will-change 值是 transform 或 perspective
+filter 值不为 none 或 will-change 值是 filter (Firefox下).
+5.如果 position 属性是 fixed，包含块就是由 viewport (in the case of continuous media) 或是组成的。
+6.CSS中的百分比是根据生成的框的包含块的高度计算的。如果未明确指定包含块的高度（即要使用百分比，包含块必须有宽度和高度），并且此元素未绝对定位，则百分比值将被视为“0”（对于“min-height”）或“none” （’max-height’）。
+7.如果要计算 height top 及 bottom 中的百分值，是通过包含块的 height 的值。如果包含块的 height 值会根据它的内容变化，而且包含块的 position 属性的值被赋予 relative 或 static ，那么，这些值的计算值为 0。要计算 width, left, right, padding, margin 这些属性由包含块的 width 属性的值来计算它的百分值。
+8.以百分比为单位时，包含块大小跟盒模型有关，主要受其padding属性影响。给两种盒模型的子元素设置width=50%，不同的盒模型，子元素的width是不同的。</p></blockquote> <h2 id="控制框"><a href="#控制框" class="header-anchor">#</a> 控制框</h2> <h3 id="块框"><a href="#块框" class="header-anchor">#</a> 块框</h3> <p>1.块级元素会生成一个块框（Block Box），块框会占据一整行，用来包含子box和生成的内容；
+2.块框同时也是一个块包含框（Containing Box），里面要么只包含块框，要么只包含行内框（不能混杂）；
+3.如果块框内部有块级元素也有行内元素，那么行内元素会被匿名块框包围。也就是说如果一个块框在其中包含另一个块框，那么我们强迫它只能包含块框，因此其他文本内容生成出来的都是匿名块框（而不是匿名行内框）
+如下，div为一个块框、p是另一个块框。上一行文本被包含在一个匿名块框内</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+   I'm some text!
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>I'm included by p!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="行内框"><a href="#行内框" class="header-anchor">#</a> 行内框</h3> <p>*一个行内元素生成一个行内框；行内元素能排在一行，允许左右有其他元素。</p> <h3 id="fc"><a href="#fc" class="header-anchor">#</a> FC</h3> <p>*格式化上下文定义框内部的元素渲染规则，它可以将框内部与外部隔开，外部样式不会影响内部
+*包含块级格式化上下文BFC、行内格式化上下文IFC、网格布局格式化上下文GFC、自适应格式上下文FFC(Flex formatting contexts)</p> <h3 id="bfc"><a href="#bfc" class="header-anchor">#</a> BFC</h3> <p>常用的创建块级格式化上下文的方式有：
+*根元素或包含根元素的元素
+*overflow不为visible的块元素。
+*行内块元素(display = inline-bloc 会在元素外层产生IFC（所以这个元素可以通过text-align水平居中），当然，它的内部则按照BFC规则渲染)
+*浮动元素
+*绝对定位元素
+*弹性元素(flex)
+完整内容见<a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context" target="_blank" rel="noopener noreferrer">MDN<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h3 id="bfc特点："><a href="#bfc特点：" class="header-anchor">#</a> BFC特点：</h3> <p>*清除浮动。内部box在垂直方向，一个接一个的放置，BFC区域不会与float box重叠
+*外边距塌陷。box的垂直方向由margin决定，属于同一个BFC的两个box间的margin会重叠
+*BFC就是页面上的一个隔离的独立容器，容器里的子元素不会影响到外面的元素，反之也是如此；
+*计算BFC的高度时，浮动元素也参与计算（不会浮动塌陷如overflow：hidden清除浮动就是这个原理）；</p> <h3 id="ifc"><a href="#ifc" class="header-anchor">#</a> IFC</h3> <p>*行内元素可以产生行内格式化上下文
+*行内框是水平方向一个接一个排列，起点是包含块的顶部。
+*行内格式化上下文高度由其包含行内元素中最高的实际高度计算而来(不受到竖直方向的padding/margin影响）。水平方向上的margin，border和padding在框之间会保留。框在垂直方向上可以以不同的方式对齐：顶部、底部对齐或根据其中文字的基线对齐)
+*最高的元素高度未设置时，行内框的高度由line-height决定，而其内部的包含块之间的可以高度各不相同(比如只含文本的行框高度与包含图片的行框高度之间)。line-height是上下两行文本的基线之间的距离</p> <h3 id="ffc"><a href="#ffc" class="header-anchor">#</a> FFC</h3> <p>自适应格式化上下文，当设置display为flex时，内部生成一个BFC。设置display为inline-flex时，内部生成一个IFC</p> <h3 id="gfc"><a href="#gfc" class="header-anchor">#</a> GFC</h3> <p>网格布局格式化上下文，当为一个元素设置display值为grid的时候，此元素将会获得一个独立的渲染区域</p> <p>最后，解释一下为什么上面的元素可以居中。行内框的高度能够容纳它包含的所有框,当框的高度小于行内框的高度(例如,如果框是baseline对齐)时,框的竖直对齐方式由vertical-align属性决定。所以class = main的div的伪元素跟“我是居中的元素”形成了一个行内框，而设置行内框的对齐方式为middle，就居中了。</p></div> <div class="content-time" data-v-f5f72dc4><time datetime="2019-02-22" class="time-text" data-v-f5f72dc4>Create Time: 2019-8-28</time> <time datetime="2019-02-22" class="time-text" data-v-f5f72dc4>Last Updated: 2019-11-13</time></div></article> <section class="flex-xb main info-nav" data-v-71a7ec73 data-v-39edd49c><a href="/doc/vuepress-plugin-img-lazy.html" class="flex-xb nav-item" data-v-71a7ec73><div class="flex-xcc item-img" data-v-71a7ec73><img data-src="https://picsum.photos/536/354?random&amp;date=2019-09-21" alt="vuepress-plugin-img-lazy" loading="lazy" class="img lazy" data-v-71a7ec73></div> <article class="flex-ysc item-content" data-v-71a7ec73><h2 class="content-title" data-v-71a7ec73>vuepress-plugin-img-lazy</h2> <div class="content" data-v-71a7ec73><blockquote>
+<p>a vuepress plugin to better supporting image lazy loading</p>
+</blockquote>
+</div></article></a> <a href="/doc/vue%E7%BB%84%E4%BB%B6%E5%8F%91%E5%B8%83%E5%88%B0npm.html" class="flex-xb nav-item" data-v-71a7ec73><div class="flex-xcc item-img" data-v-71a7ec73><img data-src="https://picsum.photos/1920/1080/?random&amp;date=2019-08-1-16" alt="vue组件发布到npm" loading="lazy" class="img lazy" data-v-71a7ec73></div> <article class="flex-ysc item-content" data-v-71a7ec73><h2 class="content-title" data-v-71a7ec73>vue组件发布到npm</h2> <div class="content" data-v-71a7ec73></div></article></a></section> <!----></section></section> <footer class="footer" data-v-97f32788 data-v-4447dda2><nav class="link-list" data-v-97f32788><a href="https://github.com/NicCraver" target="_blank" rel="noopener noreferrer" class="list-item" data-v-97f32788>Github</a></nav> <a href="/" class="copyright router-link-active" data-v-97f32788>Nic | Y © 2019</a></footer></section><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.a812c260.js" defer></script><script src="/assets/js/3.192a24fc.js" defer></script>
+  </body>
+</html>
